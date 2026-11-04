@@ -272,8 +272,8 @@ var home_default = UNSAFE_withComponentProps(function Home() {
 // \0virtual:react-router/server-manifest
 var server_manifest_default = {
 	"entry": {
-		"module": "/baopun/assets/entry.client-B-8FrUIo.js",
-		"imports": ["/baopun/assets/jsx-runtime-BmUF91tX.js"],
+		"module": "/baopun-website/assets/entry.client-B-8FrUIo.js",
+		"imports": ["/baopun-website/assets/jsx-runtime-BmUF91tX.js"],
 		"css": []
 	},
 	"routes": {
@@ -290,9 +290,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": true,
-			"module": "/baopun/assets/root-CzX8xLOz.js",
-			"imports": ["/baopun/assets/jsx-runtime-BmUF91tX.js", "/baopun/assets/lib-Bn9R3hw-.js"],
-			"css": ["/baopun/assets/root-B-mqanXQ.css"],
+			"module": "/baopun-website/assets/root-CzX8xLOz.js",
+			"imports": ["/baopun-website/assets/jsx-runtime-BmUF91tX.js", "/baopun-website/assets/lib-Bn9R3hw-.js"],
+			"css": ["/baopun-website/assets/root-B-mqanXQ.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -311,17 +311,17 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/baopun/assets/home-B-pAotPG.js",
-			"imports": ["/baopun/assets/jsx-runtime-BmUF91tX.js", "/baopun/assets/lib-Bn9R3hw-.js"],
-			"css": ["/baopun/assets/home-oVRx5xl2.css"],
+			"module": "/baopun-website/assets/home-B-pAotPG.js",
+			"imports": ["/baopun-website/assets/jsx-runtime-BmUF91tX.js", "/baopun-website/assets/lib-Bn9R3hw-.js"],
+			"css": ["/baopun-website/assets/home-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/baopun/assets/manifest-406f8c08.js",
-	"version": "406f8c08",
+	"url": "/baopun-website/assets/manifest-ffda0da1.js",
+	"version": "ffda0da1",
 	"sri": void 0
 };
 // \0virtual:react-router/server-build
@@ -341,7 +341,7 @@ var routeDiscovery = {
 	"mode": "lazy",
 	"manifestPath": "/__manifest"
 };
-var publicPath = "/baopun/";
+var publicPath = "/baopun-website/";
 var entry = { module: entry_server_node_exports };
 var routes = {
 	"root": {
