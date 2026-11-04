@@ -1,10 +1,9 @@
 import { PassThrough } from "node:stream";
 import { createReadableStreamFromReadable } from "@react-router/node";
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
+import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
-import { HashRouter, Link } from "react-router-dom";
 import { useState } from "react";
 // \0rolldown/runtime.js
 var __defProp = Object.defineProperty;
@@ -173,7 +172,7 @@ function NavigationBar() {
 	function ignoreHideNavBarHandler(event) {
 		event.stopPropagation();
 	}
-	return /* @__PURE__ */ jsxs(HashRouter, { children: [!showNavigation && /* @__PURE__ */ jsx("span", {
+	return /* @__PURE__ */ jsxs(Fragment, { children: [!showNavigation && /* @__PURE__ */ jsx("span", {
 		style: {
 			position: "absolute",
 			top: "0%",
@@ -255,8 +254,8 @@ var home_default = UNSAFE_withComponentProps(function Home() {
 // \0virtual:react-router/server-manifest
 var server_manifest_default = {
 	"entry": {
-		"module": "/assets/entry.client-gVHfvs6f.js",
-		"imports": ["/assets/jsx-runtime-kJvsgA-r.js"],
+		"module": "/baopun-website/assets/entry.client-Dgn1TTJN.js",
+		"imports": ["/baopun-website/assets/jsx-runtime-Yykwgpsd.js"],
 		"css": []
 	},
 	"routes": {
@@ -273,9 +272,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": true,
-			"module": "/assets/root-BXVKks00.js",
-			"imports": ["/assets/jsx-runtime-kJvsgA-r.js", "/assets/lib-Cb0_g11-.js"],
-			"css": ["/assets/root-B-mqanXQ.css"],
+			"module": "/baopun-website/assets/root-Ba_IJ3Vm.js",
+			"imports": ["/baopun-website/assets/jsx-runtime-Yykwgpsd.js", "/baopun-website/assets/lib-D4DplKFp.js"],
+			"css": ["/baopun-website/assets/root-B-mqanXQ.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -294,17 +293,17 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/home-DbPSwXbY.js",
-			"imports": ["/assets/jsx-runtime-kJvsgA-r.js", "/assets/lib-Cb0_g11-.js"],
-			"css": ["/assets/home-oVRx5xl2.css"],
+			"module": "/baopun-website/assets/home-ajXRO7rm.js",
+			"imports": ["/baopun-website/assets/jsx-runtime-Yykwgpsd.js", "/baopun-website/assets/lib-D4DplKFp.js"],
+			"css": ["/baopun-website/assets/home-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/assets/manifest-7d7c8f80.js",
-	"version": "7d7c8f80",
+	"url": "/baopun-website/assets/manifest-fb58b30b.js",
+	"version": "fb58b30b",
 	"sri": void 0
 };
 // \0virtual:react-router/server-build
@@ -324,7 +323,7 @@ var routeDiscovery = {
 	"mode": "lazy",
 	"manifestPath": "/__manifest"
 };
-var publicPath = "/";
+var publicPath = "/baopun-website/";
 var entry = { module: entry_server_node_exports };
 var routes = {
 	"root": {
