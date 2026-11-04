@@ -1,10 +1,10 @@
 import { PassThrough } from "node:stream";
 import { createReadableStreamFromReadable } from "@react-router/node";
-import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
-import { HashRouter } from "react-router-dom";
+import { HashRouter, Link } from "react-router-dom";
 import { useState } from "react";
 // \0rolldown/runtime.js
 var __defProp = Object.defineProperty;
@@ -173,7 +173,7 @@ function NavigationBar() {
 	function ignoreHideNavBarHandler(event) {
 		event.stopPropagation();
 	}
-	return /* @__PURE__ */ jsxs(Fragment, { children: [!showNavigation && /* @__PURE__ */ jsx("span", {
+	return /* @__PURE__ */ jsxs(HashRouter, { children: [!showNavigation && /* @__PURE__ */ jsx("span", {
 		style: {
 			position: "absolute",
 			top: "0%",
@@ -208,7 +208,7 @@ function NavigationBar() {
 }
 // app/Pages/HomePage.tsx
 function HomePage() {
-	return /* @__PURE__ */ jsxs(HashRouter, { children: [
+	return /* @__PURE__ */ jsxs(Fragment, { children: [
 		/* @__PURE__ */ jsx("div", {
 			className: style_module_default.title,
 			children: /* @__PURE__ */ jsx("h1", {
@@ -294,7 +294,7 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/baopun/assets/home-D3OgoHAz.js",
+			"module": "/baopun/assets/home-DbPSwXbY.js",
 			"imports": ["/baopun/assets/jsx-runtime-kJvsgA-r.js", "/baopun/assets/lib-Cb0_g11-.js"],
 			"css": ["/baopun/assets/home-oVRx5xl2.css"],
 			"clientActionModule": void 0,
@@ -303,8 +303,8 @@ var server_manifest_default = {
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/baopun/assets/manifest-fdcdef6f.js",
-	"version": "fdcdef6f",
+	"url": "/baopun/assets/manifest-915969c4.js",
+	"version": "915969c4",
 	"sri": void 0
 };
 // \0virtual:react-router/server-build
