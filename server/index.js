@@ -4,7 +4,7 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_w
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
-import { HashRouter, Link } from "react-router-dom";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 // \0rolldown/runtime.js
 var __defProp = Object.defineProperty;
@@ -173,38 +173,55 @@ function NavigationBar() {
 	function ignoreHideNavBarHandler(event) {
 		event.stopPropagation();
 	}
-	return /* @__PURE__ */ jsxs(HashRouter, { children: [!showNavigation && /* @__PURE__ */ jsx("span", {
-		style: {
-			position: "absolute",
-			top: "0%",
-			fontSize: "45px"
-		},
-		onClick: clickNavigationBarHandler,
-		children: "☰"
-	}), showNavigation && /* @__PURE__ */ jsx("div", {
-		id: style_module_default["left-side-nav"],
-		onClick: clickNavigationBarHandler,
-		children: /* @__PURE__ */ jsxs("ol", { children: [
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-				to: "/Projects",
-				style: { fontSize: "18px" },
-				onClick: ignoreHideNavBarHandler,
-				children: "Projects"
-			}) }),
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-				to: "/About",
-				style: { fontSize: "18px" },
-				onClick: ignoreHideNavBarHandler,
-				children: "About Me"
-			}) }),
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-				to: "/MarioKart",
-				style: { fontSize: "18px" },
-				onClick: ignoreHideNavBarHandler,
-				children: "Mario Kart"
-			}) })
+	return /* @__PURE__ */ jsxs(HashRouter, { children: [
+		!showNavigation && /* @__PURE__ */ jsx("span", {
+			style: {
+				position: "absolute",
+				top: "0%",
+				fontSize: "45px"
+			},
+			onClick: clickNavigationBarHandler,
+			children: "☰"
+		}),
+		showNavigation && /* @__PURE__ */ jsx("div", {
+			id: style_module_default["left-side-nav"],
+			onClick: clickNavigationBarHandler,
+			children: /* @__PURE__ */ jsxs("ol", { children: [
+				/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+					to: "/Projects",
+					style: { fontSize: "18px" },
+					onClick: ignoreHideNavBarHandler,
+					children: "Projects"
+				}) }),
+				/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+					to: "/About",
+					style: { fontSize: "18px" },
+					onClick: ignoreHideNavBarHandler,
+					children: "About Me"
+				}) }),
+				/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+					to: "/MarioKart",
+					style: { fontSize: "18px" },
+					onClick: ignoreHideNavBarHandler,
+					children: "Mario Kart"
+				}) })
+			] })
+		}),
+		/* @__PURE__ */ jsxs(Routes, { children: [
+			/* @__PURE__ */ jsx(Route, {
+				path: "/Projects",
+				element: /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("h1", { children: "Projects Page" }) })
+			}),
+			/* @__PURE__ */ jsx(Route, {
+				path: "/About",
+				element: /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("h1", { children: "About Me Page" }) })
+			}),
+			/* @__PURE__ */ jsx(Route, {
+				path: "/MarioKart",
+				element: /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("h1", { children: "Mario Kart Page" }) })
+			})
 		] })
-	})] });
+	] });
 }
 // app/Pages/HomePage.tsx
 function HomePage() {
@@ -255,8 +272,8 @@ var home_default = UNSAFE_withComponentProps(function Home() {
 // \0virtual:react-router/server-manifest
 var server_manifest_default = {
 	"entry": {
-		"module": "/baopun/assets/entry.client-gVHfvs6f.js",
-		"imports": ["/baopun/assets/jsx-runtime-kJvsgA-r.js"],
+		"module": "/baopun/assets/entry.client-B-8FrUIo.js",
+		"imports": ["/baopun/assets/jsx-runtime-BmUF91tX.js"],
 		"css": []
 	},
 	"routes": {
@@ -273,8 +290,8 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": true,
-			"module": "/baopun/assets/root-BXVKks00.js",
-			"imports": ["/baopun/assets/jsx-runtime-kJvsgA-r.js", "/baopun/assets/lib-Cb0_g11-.js"],
+			"module": "/baopun/assets/root-CzX8xLOz.js",
+			"imports": ["/baopun/assets/jsx-runtime-BmUF91tX.js", "/baopun/assets/lib-Bn9R3hw-.js"],
 			"css": ["/baopun/assets/root-B-mqanXQ.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
@@ -294,8 +311,8 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/baopun/assets/home-DbPSwXbY.js",
-			"imports": ["/baopun/assets/jsx-runtime-kJvsgA-r.js", "/baopun/assets/lib-Cb0_g11-.js"],
+			"module": "/baopun/assets/home-B-pAotPG.js",
+			"imports": ["/baopun/assets/jsx-runtime-BmUF91tX.js", "/baopun/assets/lib-Bn9R3hw-.js"],
 			"css": ["/baopun/assets/home-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
@@ -303,8 +320,8 @@ var server_manifest_default = {
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/baopun/assets/manifest-915969c4.js",
-	"version": "915969c4",
+	"url": "/baopun/assets/manifest-406f8c08.js",
+	"version": "406f8c08",
 	"sri": void 0
 };
 // \0virtual:react-router/server-build
