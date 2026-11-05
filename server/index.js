@@ -4,7 +4,6 @@ import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UN
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
-import { Link as Link$1 } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 // \0rolldown/runtime.js
 var __defProp = Object.defineProperty;
@@ -185,19 +184,19 @@ function NavigationBar() {
 		id: style_module_default["left-side-nav"],
 		onClick: clickNavigationBarHandler,
 		children: /* @__PURE__ */ jsxs("ol", { children: [
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link$1, {
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
 				to: "/Projects",
 				style: { fontSize: "18px" },
 				onClick: ignoreHideNavBarHandler,
 				children: "Projects"
 			}) }),
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link$1, {
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
 				to: "/About",
 				style: { fontSize: "18px" },
 				onClick: ignoreHideNavBarHandler,
 				children: "About Me"
 			}) }),
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link$1, {
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
 				to: "/MarioKart",
 				style: { fontSize: "18px" },
 				onClick: ignoreHideNavBarHandler,
@@ -238,813 +237,12 @@ function HomePage() {
 		/* @__PURE__ */ jsx(NavigationBar, {})
 	] });
 }
-// app/routes/home.tsx
-var home_exports = /* @__PURE__ */ __exportAll({
-	default: () => home_default,
-	meta: () => meta$6
-});
-function meta$6({}) {
-	return [{ title: "New React Router App" }, {
-		name: "description",
-		content: "Welcome to React Router!"
-	}];
-}
-var home_default = UNSAFE_withComponentProps(function Home() {
-	return /* @__PURE__ */ jsx(HomePage, {});
-});
-// app/Pages/MarioKart.tsx
-var MarioKart_exports = /* @__PURE__ */ __exportAll({
-	default: () => MarioKart_default,
-	meta: () => meta$5
-});
-function meta$5({}) {
-	return [{ title: "Mario Kart" }, {
-		name: "description",
-		content: "Bao Phung Homepage"
-	}];
-}
-function FormatButton({ format, onClick }) {
-	return /* @__PURE__ */ jsx("button", {
-		className: style_module_default.formatButton,
-		onClick,
-		children: format
-	});
-}
-function FormatSelectorPage() {
-	const navigate = useNavigate();
-	function FormatButtonClick(format) {
-		navigate(`/ScoreTracker`, { state: { format } });
-	}
-	return /* @__PURE__ */ jsxs(Fragment, { children: [/* @__PURE__ */ jsxs("div", {
-		id: style_module_default.marioKartFormatLabel,
-		children: [
-			/* @__PURE__ */ jsx("p", { children: "This is the Mario Kart page, mainly for setting up scores for a competitive match." }),
-			/* @__PURE__ */ jsx("p", { children: "Click on one of the formats below to set up teams." }),
-			/* @__PURE__ */ jsx("p", { children: "Note that the 8v8 and 12v12 formats will have 24 players, while the others will have 12 players by default." })
-		]
-	}), /* @__PURE__ */ jsxs("div", {
-		className: style_module_default.formatSelector,
-		children: [
-			/* @__PURE__ */ jsx(FormatButton, {
-				format: "2v2",
-				onClick: () => FormatButtonClick("2")
-			}),
-			/* @__PURE__ */ jsx(FormatButton, {
-				format: "3v3",
-				onClick: () => FormatButtonClick("3")
-			}),
-			/* @__PURE__ */ jsx(FormatButton, {
-				format: "4v4",
-				onClick: () => FormatButtonClick("4")
-			}),
-			/* @__PURE__ */ jsx(FormatButton, {
-				format: "6v6",
-				onClick: () => FormatButtonClick("6")
-			}),
-			/* @__PURE__ */ jsx(FormatButton, {
-				format: "8v8",
-				onClick: () => FormatButtonClick("8")
-			}),
-			/* @__PURE__ */ jsx(FormatButton, {
-				format: "12v12",
-				onClick: () => FormatButtonClick("12")
-			})
-		]
-	})] });
-}
-var MarioKart_default = UNSAFE_withComponentProps(function MarioKartPage() {
-	return /* @__PURE__ */ jsxs("div", {
-		className: style_module_default.marioKartContainer,
-		children: [
-			/* @__PURE__ */ jsxs("div", {
-				className: style_module_default.title,
-				children: [
-					/* @__PURE__ */ jsx("h1", {
-						id: style_module_default.aboutTitle,
-						children: "Mario Kart"
-					}),
-					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
-						to: "/",
-						style: {
-							"color": "cyan",
-							"fontSize": "20px"
-						},
-						children: "Click Here"
-					}), " to return to the home page."] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsx("h1", {
-						style: { "fontSize": "30px" },
-						children: "Mario Kart World Track Randomizer"
-					}),
-					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
-						to: "/MarioKart/MKWorld",
-						style: {
-							"color": "cyan",
-							"fontSize": "20px"
-						},
-						children: "Click here"
-					}), " to randomize Mario Kart World tracks."] })
-				]
-			}),
-			/* @__PURE__ */ jsxs("div", {
-				id: style_module_default.marioKartCompDescription,
-				children: [
-					/* @__PURE__ */ jsx("h1", {
-						style: { "fontSize": "30px" },
-						children: "About Competitive Mario Kart"
-					}),
-					/* @__PURE__ */ jsx("p", { children: "Mario Kart can be played competitively, believe it or not.  With the advent of Mario Kart World and its groundbreaking mechanics, it comes as no surprise that players want to become the best at the game." }),
-					/* @__PURE__ */ jsx("p", { children: "In fact, competitive Mario Kart has existed for a long time, with support for older classics such as Mario Kart Wii that still runs tournaments to this day. " }),
-					/* @__PURE__ */ jsx("p", { children: "If you want to participate in competitive Mario Kart matches, please sign up on Mario Kart Central first." }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsx("p", { children: /* @__PURE__ */ jsxs("ul", { children: ["Link to the Mario Kart Central page below (click on 'Mario Kart Central'):", /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-						to: "https://mkcentral.com/en-us",
-						target: "_blank",
-						style: { "color": "cyan" },
-						children: "Mario Kart Central"
-					}) })] }) }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"Then, you want to join a discord server for the Mario Kart game you wish to participate in.",
-						/* @__PURE__ */ jsx("br", {}),
-						"Note that you will need to be verified on whichever server you join, which is done via creating an account at Mario Kart Central.",
-						/* @__PURE__ */ jsx("br", {}),
-						"You can find more information about the verification process once you join your desired discord server.",
-						/* @__PURE__ */ jsx("br", {}),
-						/* @__PURE__ */ jsx("br", {}),
-						/* @__PURE__ */ jsxs("ul", { children: [
-							"List of competitive Mario Kart discords (click on one to join the discord server):",
-							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-								to: "https://discord.gg/WR6JKPn2v9",
-								target: "_blank",
-								style: { "color": "cyan" },
-								children: "Mario Kart World"
-							}) }),
-							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-								to: "https://discord.gg/revmGkE",
-								target: "_blank",
-								style: { "color": "cyan" },
-								children: "Mario Kart 8 Deluxe 150cc"
-							}) }),
-							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-								to: "https://discord.gg/dfdRkFu",
-								target: "_blank",
-								style: { "color": "cyan" },
-								children: "Mario Kart 8 Deluxe 200cc"
-							}) }),
-							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-								to: "https://discord.gg/vYr3bQQHFY",
-								target: "_blank",
-								style: { "color": "cyan" },
-								children: "Mario Kart Tour"
-							}) }),
-							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-								to: "https://discord.gg/cZZp9DdQ5e",
-								target: "_blank",
-								style: { "color": "cyan" },
-								children: "Mario Kart 7"
-							}) }),
-							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
-								to: "https://discord.gg/mkw",
-								target: "_blank",
-								style: { "color": "cyan" },
-								children: "Mario Kart Wii"
-							}) })
-						] })
-					] })
-				]
-			}),
-			/* @__PURE__ */ jsx(FormatSelectorPage, {}),
-			/* @__PURE__ */ jsx(NavigationBar, {})
-		]
-	});
-});
-// app/Pages/WorldRandomizer.tsx
-var WorldRandomizer_exports = /* @__PURE__ */ __exportAll({
-	default: () => WorldRandomizer_default,
-	meta: () => meta$4
-});
-function meta$4({}) {
-	return [{ title: "Mario Kart World Randomizer" }, {
-		name: "description",
-		content: "Mario Kart World"
-	}];
-}
-var WorldRandomizer_default = UNSAFE_withComponentProps(function WorldRandomizerPage() {
-	const tracksToId = [
-		"DKS",
-		"KTB",
-		"RR",
-		"CC",
-		"WS",
-		"rDH",
-		"MBC",
-		"PS",
-		"rCM",
-		"FO",
-		"rDDJ",
-		"GBR",
-		"rPB",
-		"SSS",
-		"CCF",
-		"rMMM",
-		"rTF",
-		"rWS",
-		"rSGB",
-		"rWSh",
-		"rDKP",
-		"DD",
-		"rMC",
-		"rSHS",
-		"SP",
-		"BCi",
-		"AH",
-		"DBB",
-		"BC",
-		"rAF"
-	];
-	const tracksList = {
-		"DKS": "DK Spaceport",
-		"KTB": "Koopa Troopa Beach",
-		"RR": "Rainbow Road",
-		"CC": "Crown City",
-		"WS": "Whistlestop Summit",
-		"rDH": "Desert Hills",
-		"MBC": "Mario Bros. Circuit",
-		"PS": "Peach Stadium",
-		"rCM": "Choco Mountain",
-		"FO": "Faraway Oasis",
-		"rDDJ": "Dino Dino Jungle",
-		"GBR": "Great ? Block Ruins",
-		"rPB": "Peach Beach",
-		"SSS": "Salty Salty Speedway",
-		"CCF": "Cheep Cheep Falls",
-		"rMMM": "Moo Moo Meadows",
-		"rTF": "Toad's Factory",
-		"rWS": "Wario Stadium",
-		"rSGB": "Shy Guy Bazaar",
-		"rWSh": "Wario Shipyard",
-		"rDKP": "DK Pass",
-		"DD": "Dandelion Depths",
-		"rMC": "Mario Circuit",
-		"rSHS": "Sky-High Sundae",
-		"SP": "Starview Peak",
-		"BCi": "Boo Cinema",
-		"AH": "Acorn Heights",
-		"DBB": "Dry Bones Burnout",
-		"BC": "Bowser's Castle",
-		"rAF": "Airship Fortress"
-	};
-	const [isRandomizing, setIsRandomizing] = useState(true);
-	const [track, setTrack] = useState("");
-	const trackRef = useRef(null);
-	const [trackPool, setTrackPool] = useState(tracksToId);
-	const [isRemovePoolChecked, setIsRemovePoolChecked] = useState(true);
-	const getRandomTrack = () => {
-		const trackId = Math.floor(Math.random() * trackPool.length);
-		setTrack(trackPool[trackId]);
-	};
-	const removeTrackFromPool = () => {
-		let trackPoolCopy = trackPool;
-		trackPoolCopy = trackPoolCopy.filter((t) => t !== track);
-		setTrackPool(trackPoolCopy);
-	};
-	function randomButtonOnClick() {
-		setIsRandomizing(!isRandomizing);
-	}
-	function removePoolCheckboxOnHandler(e) {
-		setIsRemovePoolChecked(!isRemovePoolChecked);
-	}
-	function resetTrackPool() {
-		setTrackPool(tracksToId);
-		alert("Track pool has been reset.");
-	}
-	useEffect(() => {
-		if (isRandomizing) trackRef.current = setInterval(getRandomTrack, 50);
-		else {
-			if (isRemovePoolChecked) removeTrackFromPool();
-			if (trackPool.length <= 1 && isRemovePoolChecked) resetTrackPool();
-		}
-		return () => {
-			if (trackRef.current) clearInterval(trackRef.current);
-		};
-	}, [isRandomizing]);
-	return /* @__PURE__ */ jsxs("div", {
-		className: style_module_default.randomizerContainer,
-		children: [
-			/* @__PURE__ */ jsxs("div", {
-				className: style_module_default.title,
-				children: [
-					/* @__PURE__ */ jsx("h1", {
-						id: style_module_default.aboutTitle,
-						children: "Mario Kart World Track Randomizer"
-					}),
-					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
-						to: "/MarioKart",
-						style: {
-							"color": "cyan",
-							"fontSize": "20px"
-						},
-						children: "Click Here"
-					}), " to return to the Mario Kart page."] }),
-					/* @__PURE__ */ jsx("br", {})
-				]
-			}),
-			/* @__PURE__ */ jsxs("h1", { children: [trackPool.length, " tracks currently in the pool"] }),
-			/* @__PURE__ */ jsx("br", {}),
-			/* @__PURE__ */ jsxs("h1", { children: [
-				"Click on the icon to ",
-				isRandomizing ? "stop" : "start",
-				" the track wheel."
-			] }),
-			/* @__PURE__ */ jsx("br", {}),
-			track !== "" && /* @__PURE__ */ jsx("img", {
-				id: style_module_default.stopRandomButton,
-				src: `/${track}.jpg`,
-				width: 250,
-				height: 250,
-				alt: tracksList[track],
-				onClick: randomButtonOnClick
-			}),
-			/* @__PURE__ */ jsx("br", {}),
-			/* @__PURE__ */ jsxs("form", { children: [
-				/* @__PURE__ */ jsx("input", {
-					type: "checkbox",
-					id: "removeFromPool",
-					name: "removeFromPool",
-					onChange: (e) => removePoolCheckboxOnHandler(e),
-					checked: isRemovePoolChecked
-				}),
-				/* @__PURE__ */ jsx("label", {
-					htmlFor: "removeFromPool",
-					style: {
-						fontSize: "20px",
-						marginLeft: "5px"
-					},
-					children: "Remove from Pool"
-				}),
-				/* @__PURE__ */ jsx("br", {}),
-				/* @__PURE__ */ jsx("input", {
-					type: "button",
-					value: "Click to restore the pool",
-					onClick: () => resetTrackPool(),
-					style: {
-						fontSize: "20px",
-						marginTop: "35px"
-					}
-				})
-			] })
-		]
-	});
-});
-// app/Pages/ScoreTracker.tsx
-var ScoreTracker_exports = /* @__PURE__ */ __exportAll({
-	default: () => ScoreTracker_default,
-	meta: () => meta$3
-});
-function meta$3({}) {
-	return [{ title: "Score Tracker" }, {
-		name: "description",
-		content: "Bao Phung Homepage"
-	}];
-}
-var ScoreTracker_default = UNSAFE_withComponentProps(function ScoreTrackerPage() {
-	const { format } = useLocation().state || { format: null };
-	const navigate = useNavigate();
-	const [teamName, setTeamName] = useState("");
-	const [allowTeamInput, setAllowTeamInput] = useState(true);
-	const teamInputRef = useRef(null);
-	const scoreInputRef = useRef(null);
-	const [currentRace, setCurrentRace] = useState(1);
-	const [currentPlacement, setCurrentPlacement] = useState(1);
-	const maxPlayers = format === "8" || format === "12" ? 24 : 12;
-	const [teams, setTeams] = useState([]);
-	const [teamsCopy, setTeamsCopy] = useState([]);
-	const [addFormVisible, setAddFormVisible] = useState(true);
-	const [scoreFormVisible, setScoreFormVisible] = useState(false);
-	class Team {
-		#name;
-		#score;
-		#entries;
-		constructor(name) {
-			this.#name = name;
-			this.#score = 0;
-			this.#entries = parseInt(format);
-		}
-		getName() {
-			return this.#name;
-		}
-		getScore() {
-			return this.#score;
-		}
-		getEntries() {
-			return this.#entries;
-		}
-		setEntry(placement) {
-			if (this.#entries > 0) {
-				this.#addPoints(placement);
-				this.#entries--;
-				return true;
-			}
-			alert(`No more entries available for ${this.#name}.`);
-			return false;
-		}
-		resetEntries() {
-			if (this.#entries === 0) this.#entries = parseInt(format);
-		}
-		#addPoints(placement) {
-			let pointPlacements;
-			if (maxPlayers === 12) pointPlacements = [
-				15,
-				12,
-				10,
-				9,
-				8,
-				7,
-				6,
-				5,
-				4,
-				3,
-				2,
-				1
-			];
-			else if (maxPlayers === 24) pointPlacements = [
-				15,
-				12,
-				10,
-				9,
-				9,
-				8,
-				8,
-				7,
-				7,
-				6,
-				6,
-				6,
-				5,
-				5,
-				5,
-				4,
-				4,
-				4,
-				3,
-				3,
-				3,
-				2,
-				2,
-				1
-			];
-			else return;
-			this.#score += pointPlacements[placement - 1];
-		}
-	}
-	function AddTeamForm() {
-		return /* @__PURE__ */ jsxs("form", {
-			onSubmit: handleAddTeam,
-			id: style_module_default.scoreTrackerTeamSubmitForm,
-			children: [/* @__PURE__ */ jsx("label", {
-				htmlFor: "teamNameInput",
-				children: "Enter Team Name:"
-			}), /* @__PURE__ */ jsx("input", {
-				type: "text",
-				id: "teamNameInput",
-				name: "teamNameInput",
-				value: teamName,
-				onChange: (e) => setTeamName(e.target.value),
-				ref: teamInputRef,
-				style: {
-					backgroundColor: "white",
-					color: "black"
-				},
-				required: true,
-				autoFocus: true
-			})]
-		});
-	}
-	function AddScoreForm() {
-		let placementString;
-		if (currentPlacement === 1 || currentPlacement === 21) placementString = "st";
-		else if (currentPlacement === 2 || currentPlacement === 22) placementString = "nd";
-		else if (currentPlacement === 3 || currentPlacement === 23) placementString = "rd";
-		else placementString = "th";
-		return /* @__PURE__ */ jsxs("form", {
-			onSubmit: handleAddScore,
-			id: style_module_default.scoreTrackerScoreSubmitForm,
-			children: [/* @__PURE__ */ jsxs("label", {
-				htmlFor: "teamScoreInput",
-				children: [
-					"Enter team for ",
-					currentPlacement,
-					placementString,
-					" place: "
-				]
-			}), /* @__PURE__ */ jsx("input", {
-				type: "text",
-				id: "teamScoreInput",
-				name: "score",
-				value: teamName,
-				onChange: (e) => setTeamName(e.target.value),
-				ref: scoreInputRef,
-				readOnly: !allowTeamInput,
-				style: {
-					backgroundColor: "white",
-					color: "black"
-				},
-				required: true,
-				autoFocus: true
-			})]
-		});
-	}
-	function handleAddTeam(event) {
-		event.preventDefault();
-		addTeam();
-		setTeamName("");
-	}
-	function handleAddScore(event) {
-		event.preventDefault();
-		if (teamName === "" || teamName === null || teamName === void 0) {
-			alert("Please enter a team.");
-			return;
-		}
-		const teamIndex = teams.findIndex((team) => team.getName().at(0)?.toUpperCase() === teamName.at(0).toUpperCase());
-		const teamCopyIndex = teamsCopy.findIndex((team) => team.getName().at(0).toUpperCase() === teamName.at(0)?.toUpperCase());
-		if (teamIndex === -1) {
-			alert(`Team ${teamName} not found. Please enter an existing team.`);
-			setTeamName("");
-			return;
-		}
-		if (teams[teamIndex].getEntries() === 0) {
-			alert(`Team ${teamName} has no more entries.`);
-			setTeamName("");
-			return;
-		}
-		teams[teamIndex].setEntry(currentPlacement);
-		teamsCopy[teamCopyIndex].setEntry(currentPlacement);
-		setCurrentPlacement(currentPlacement + 1);
-		if (currentPlacement === maxPlayers) {
-			setCurrentPlacement(1);
-			setCurrentRace(currentRace + 1);
-			for (let i = 0; i < teams.length; i++) {
-				teams.at(i).resetEntries();
-				teamsCopy.at(i).resetEntries();
-			}
-		}
-		setTeamName("");
-		teams.sort((a, b) => b.getScore() - a.getScore());
-	}
-	function addTeam() {
-		if (teamName.trim().length > 10) {
-			alert("The desired team cannot have more than 10 characters.");
-			return;
-		}
-		if (teamName.trim().length === 0) {
-			alert("Please enter a team (white space is not counted).");
-			return;
-		}
-		for (let i = 0; i < teams.length; i++) if (teams.at(i).getName().charAt(0).toUpperCase() === teamName.charAt(0).toUpperCase()) {
-			alert(`A team with that tag (${teamName.charAt(0).toUpperCase()}) already exists.`);
-			return;
-		}
-		setTeams([...teams, new Team(teamName.trim())]);
-	}
-	useEffect(() => {
-		const setFormat = async () => {
-			if (format === void 0 || format === null || format !== "2" && format !== "3" && format !== "4" && format !== "6" && format !== "8" && format !== "12") {
-				alert("No/Invalid format selected. Please go back and select a format.");
-				navigate("/MarioKart");
-				return;
-			}
-		};
-		setFormat();
-	}, []);
-	useEffect(() => {
-		if (addFormVisible && maxPlayers / parseInt(format) === teams.length) {
-			alert("Maximum number of teams reached");
-			setAddFormVisible(false);
-			setScoreFormVisible(true);
-			let temp = [];
-			for (let i = 0; i < teams.length; i++) temp.push(new Team(teams[i].getName()));
-			setTeamsCopy(temp);
-		}
-	}, [teams]);
-	useEffect(() => {
-		if (currentRace === 13) {
-			alert("The mogi is over!");
-			setAllowTeamInput(false);
-		}
-	}, [currentRace]);
-	return format === void 0 || format === null || format !== "2" && format !== "3" && format !== "4" && format !== "6" && format !== "8" && format !== "12" ? /* @__PURE__ */ jsxs("div", {
-		className: style_module_default.scoreTrackerContainer,
-		children: [/* @__PURE__ */ jsx("div", {
-			className: style_module_default.title,
-			children: /* @__PURE__ */ jsx("h1", {
-				id: style_module_default.scoreTrackerTitle,
-				children: "Score Tracker"
-			})
-		}), /* @__PURE__ */ jsx("div", {
-			id: style_module_default.scoreTrackerContent,
-			children: /* @__PURE__ */ jsxs("p", { children: [
-				"No/Invalid format selected. Please ",
-				/* @__PURE__ */ jsx(Link, {
-					to: "/MarioKart",
-					children: "Click Here"
-				}),
-				" to go back and select a format."
-			] })
-		})]
-	}) : /* @__PURE__ */ jsxs("div", {
-		className: style_module_default.scoreTrackerContainer,
-		children: [/* @__PURE__ */ jsx("div", {
-			className: style_module_default.title,
-			children: /* @__PURE__ */ jsxs("h1", {
-				id: style_module_default.scoreTrackerTitle,
-				children: [
-					format,
-					"v",
-					format,
-					" Score Tracker"
-				]
-			})
-		}), /* @__PURE__ */ jsxs("div", {
-			id: style_module_default.scoreTrackerContent,
-			children: [
-				/* @__PURE__ */ jsxs("p", { children: [
-					"This is a page about the score tracker for the ",
-					format,
-					"v",
-					format,
-					" format."
-				] }),
-				/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
-					to: "/MarioKart",
-					style: {
-						"color": "cyan",
-						"fontSize": "20px"
-					},
-					children: "Click Here"
-				}), " to return to the Mario Kart page."] }),
-				/* @__PURE__ */ jsx("div", {
-					className: style_module_default.scoreTrackerTeamsContainer,
-					children: /* @__PURE__ */ jsxs("div", {
-						className: style_module_default.teamNameDisplay,
-						children: [
-							currentRace <= 12 && maxPlayers / parseInt(format) === teams.length && /* @__PURE__ */ jsxs("p", { children: ["Race #", currentRace] }),
-							currentRace > 12 && /* @__PURE__ */ jsx("p", { children: "Mogi is over!" }),
-							/* @__PURE__ */ jsx("br", {}),
-							teams.map((team, index) => /* @__PURE__ */ jsxs("span", { children: [
-								team.getName(),
-								" (",
-								team.getScore(),
-								") ",
-								index < teams.length - 1 ? " | " : ""
-							] }, team.getName())),
-							/* @__PURE__ */ jsx("br", {}),
-							/* @__PURE__ */ jsx("br", {}),
-							teamsCopy !== void 0 && teamsCopy !== null && /* @__PURE__ */ jsxs(Fragment, { children: [maxPlayers / parseInt(format) === teams.length && /* @__PURE__ */ jsxs(Fragment, { children: [/* @__PURE__ */ jsx("p", { children: "Number of entries: " }), /* @__PURE__ */ jsx("br", {})] }), teamsCopy.map((team, index) => /* @__PURE__ */ jsxs("span", { children: [
-								team.getName(),
-								" (",
-								team.getEntries(),
-								") ",
-								index < teams.length - 1 ? " | " : ""
-							] }, index + teams.length))] })
-						]
-					})
-				}),
-				/* @__PURE__ */ jsxs("div", {
-					className: style_module_default.scoreTrackerFormContainer,
-					children: [addFormVisible && /* @__PURE__ */ jsx(AddTeamForm, {}), scoreFormVisible && /* @__PURE__ */ jsx(AddScoreForm, {})]
-				})
-			]
-		})]
-	});
-});
-// app/Pages/AboutPage.tsx
-var AboutPage_exports = /* @__PURE__ */ __exportAll({
-	default: () => AboutPage_default,
-	meta: () => meta$2
-});
-function meta$2({}) {
-	return [{ title: "About Me" }, {
-		name: "description",
-		content: "About Me Page"
-	}];
-}
-var AboutPage_default = UNSAFE_withComponentProps(function AboutMePage() {
-	const [displayDate, setDisplayDate] = useState(/* @__PURE__ */ new Date());
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setDisplayDate(/* @__PURE__ */ new Date());
-		}, 1e3);
-		return () => clearInterval(interval);
-	}, []);
-	return /* @__PURE__ */ jsxs("div", {
-		className: style_module_default.aboutContainer,
-		children: [
-			/* @__PURE__ */ jsxs("div", {
-				className: style_module_default.title,
-				children: [
-					/* @__PURE__ */ jsx("h1", {
-						id: style_module_default.aboutTitle,
-						children: "About Bao Phung"
-					}),
-					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
-						to: "/",
-						style: {
-							"color": "cyan",
-							"fontSize": "20px"
-						},
-						children: "Click Here"
-					}), " to return to the home page."] }),
-					/* @__PURE__ */ jsx("br", {})
-				]
-			}),
-			/* @__PURE__ */ jsxs("div", {
-				className: style_module_default["aboutDescription"],
-				children: [
-					/* @__PURE__ */ jsx("h1", { children: "Introduction" }),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"My name is Bao Phung.  I was born on February 26, 1997 in Portland, Oregon ",
-						/* @__PURE__ */ jsx("br", {}),
-						"and have largely remained there for most of my lifetime so far."
-					] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsx("p", { children: "I enjoy video games, primarily League of Legends.  I recently developed an interest in competitive Mario Kart." }),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"If you want to add me in League of Legends, it's ",
-						/* @__PURE__ */ jsx("strong", { children: "Nindoge#KEKW" }),
-						" on the NA server."
-					] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"As for competitive Mario Kart, there actually exists a Competitive Mario Kart community.",
-						/* @__PURE__ */ jsx("br", {}),
-						"You can learn more by clicking on the Mario Kart section on the left."
-					] })
-				]
-			}),
-			/* @__PURE__ */ jsx("br", {}),
-			/* @__PURE__ */ jsx("br", {}),
-			/* @__PURE__ */ jsxs("div", {
-				className: style_module_default["aboutCareer"],
-				children: [
-					/* @__PURE__ */ jsx("h1", { children: "Career Timeline" }),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"I graduated from Oregon State University on December 20th, 2020 with a Bachelor's of Science (BS) in Computer Science.",
-						/* @__PURE__ */ jsx("br", {}),
-						"I also minored in Mathematics."
-					] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"As of right now (",
-						displayDate.toLocaleString(),
-						"), I am currently pursuing my Master's Degree (specifically, Master's of Engineering, or MEng for short) at Oregon State University."
-					] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsx("p", { children: "After my graduation, I joined Revature - a coding bootcamp that helps place software engineers with another company." }),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"Via Revature, I joined Infosys for 2 years from May 2021 to May 2023.",
-						/* @__PURE__ */ jsx("br", {}),
-						"This required me to travel to South Carolina for 2 years."
-					] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsx("p", { children: "I was initially working as WCS support for Adidas DC1 and DC2, but I got promoted to WMS support after my first year." }),
-					/* @__PURE__ */ jsx("p", { children: "Note: WCS = Warehouse Control Systems, WMS = Warehouse Management Systems" }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"As WCS support, I help ensure that the physical conveyor systems across DC1 & DC2 are operating normally.",
-						/* @__PURE__ */ jsx("br", {}),
-						"Any issues with the conveyor systems are redirected to me for troubleshooting."
-					] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsxs("p", { children: [
-						"As WMS support, I ensure that WMS operations and tasks are properly maintained.  Any troubles with warehouse tasks via WMS are redirected to me.",
-						/* @__PURE__ */ jsx("br", {}),
-						"Since most of WCS messaging comes from WMS, one of my responsibilities was to monitor messaging flow to and from WCS."
-					] }),
-					/* @__PURE__ */ jsx("br", {}),
-					/* @__PURE__ */ jsx("p", { children: "After my time with Infosys, I returned back home to Portland, Oregon.  A month later, I began freelancing as a software engineering tutor on Wyzant." }),
-					/* @__PURE__ */ jsx("p", { children: "To this day, I still remain as a freelancing tutor.  However, I have also developed multiple projects during this time.  See the \"Projects\" section." }),
-					/* @__PURE__ */ jsxs("p", { children: ["If you are interested in seeing my tutoring profile, ", /* @__PURE__ */ jsx(Link, {
-						to: "https://www.wyzant.com/tutors/baop80",
-						target: "_blank",
-						style: { "color": "cyan" },
-						children: "Click here."
-					})] })
-				]
-			}),
-			/* @__PURE__ */ jsx("br", {}),
-			/* @__PURE__ */ jsx("br", {}),
-			/* @__PURE__ */ jsx("br", {}),
-			/* @__PURE__ */ jsx(NavigationBar, {})
-		]
-	});
-});
 // app/Pages/ProjectPage.tsx
 var ProjectPage_exports = /* @__PURE__ */ __exportAll({
 	default: () => ProjectPage_default,
-	meta: () => meta$1
+	meta: () => meta$6
 });
-function meta$1({}) {
+function meta$6({}) {
 	return [{ title: "Projects" }, {
 		name: "description",
 		content: "List of Projects"
@@ -1418,6 +616,811 @@ var ProjectPage_default = UNSAFE_withComponentProps(function ProjectPage() {
 		]
 	});
 });
+// app/Pages/AboutPage.tsx
+var AboutPage_exports = /* @__PURE__ */ __exportAll({
+	default: () => AboutPage_default,
+	meta: () => meta$5
+});
+function meta$5({}) {
+	return [{ title: "About Me" }, {
+		name: "description",
+		content: "About Me Page"
+	}];
+}
+var AboutPage_default = UNSAFE_withComponentProps(function AboutMePage() {
+	const [displayDate, setDisplayDate] = useState(/* @__PURE__ */ new Date());
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setDisplayDate(/* @__PURE__ */ new Date());
+		}, 1e3);
+		return () => clearInterval(interval);
+	}, []);
+	return /* @__PURE__ */ jsxs("div", {
+		className: style_module_default.aboutContainer,
+		children: [
+			/* @__PURE__ */ jsxs("div", {
+				className: style_module_default.title,
+				children: [
+					/* @__PURE__ */ jsx("h1", {
+						id: style_module_default.aboutTitle,
+						children: "About Bao Phung"
+					}),
+					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
+						to: "/",
+						style: {
+							"color": "cyan",
+							"fontSize": "20px"
+						},
+						children: "Click Here"
+					}), " to return to the home page."] }),
+					/* @__PURE__ */ jsx("br", {})
+				]
+			}),
+			/* @__PURE__ */ jsxs("div", {
+				className: style_module_default["aboutDescription"],
+				children: [
+					/* @__PURE__ */ jsx("h1", { children: "Introduction" }),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"My name is Bao Phung.  I was born on February 26, 1997 in Portland, Oregon ",
+						/* @__PURE__ */ jsx("br", {}),
+						"and have largely remained there for most of my lifetime so far."
+					] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsx("p", { children: "I enjoy video games, primarily League of Legends.  I recently developed an interest in competitive Mario Kart." }),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"If you want to add me in League of Legends, it's ",
+						/* @__PURE__ */ jsx("strong", { children: "Nindoge#KEKW" }),
+						" on the NA server."
+					] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"As for competitive Mario Kart, there actually exists a Competitive Mario Kart community.",
+						/* @__PURE__ */ jsx("br", {}),
+						"You can learn more by clicking on the Mario Kart section on the left."
+					] })
+				]
+			}),
+			/* @__PURE__ */ jsx("br", {}),
+			/* @__PURE__ */ jsx("br", {}),
+			/* @__PURE__ */ jsxs("div", {
+				className: style_module_default["aboutCareer"],
+				children: [
+					/* @__PURE__ */ jsx("h1", { children: "Career Timeline" }),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"I graduated from Oregon State University on December 20th, 2020 with a Bachelor's of Science (BS) in Computer Science.",
+						/* @__PURE__ */ jsx("br", {}),
+						"I also minored in Mathematics."
+					] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"As of right now (",
+						displayDate.toLocaleString(),
+						"), I am currently pursuing my Master's Degree (specifically, Master's of Engineering, or MEng for short) at Oregon State University."
+					] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsx("p", { children: "After my graduation, I joined Revature - a coding bootcamp that helps place software engineers with another company." }),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"Via Revature, I joined Infosys for 2 years from May 2021 to May 2023.",
+						/* @__PURE__ */ jsx("br", {}),
+						"This required me to travel to South Carolina for 2 years."
+					] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsx("p", { children: "I was initially working as WCS support for Adidas DC1 and DC2, but I got promoted to WMS support after my first year." }),
+					/* @__PURE__ */ jsx("p", { children: "Note: WCS = Warehouse Control Systems, WMS = Warehouse Management Systems" }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"As WCS support, I help ensure that the physical conveyor systems across DC1 & DC2 are operating normally.",
+						/* @__PURE__ */ jsx("br", {}),
+						"Any issues with the conveyor systems are redirected to me for troubleshooting."
+					] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"As WMS support, I ensure that WMS operations and tasks are properly maintained.  Any troubles with warehouse tasks via WMS are redirected to me.",
+						/* @__PURE__ */ jsx("br", {}),
+						"Since most of WCS messaging comes from WMS, one of my responsibilities was to monitor messaging flow to and from WCS."
+					] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsx("p", { children: "After my time with Infosys, I returned back home to Portland, Oregon.  A month later, I began freelancing as a software engineering tutor on Wyzant." }),
+					/* @__PURE__ */ jsx("p", { children: "To this day, I still remain as a freelancing tutor.  However, I have also developed multiple projects during this time.  See the \"Projects\" section." }),
+					/* @__PURE__ */ jsxs("p", { children: ["If you are interested in seeing my tutoring profile, ", /* @__PURE__ */ jsx(Link, {
+						to: "https://www.wyzant.com/tutors/baop80",
+						target: "_blank",
+						style: { "color": "cyan" },
+						children: "Click here."
+					})] })
+				]
+			}),
+			/* @__PURE__ */ jsx("br", {}),
+			/* @__PURE__ */ jsx("br", {}),
+			/* @__PURE__ */ jsx("br", {}),
+			/* @__PURE__ */ jsx(NavigationBar, {})
+		]
+	});
+});
+// app/Pages/MarioKart.tsx
+var MarioKart_exports = /* @__PURE__ */ __exportAll({
+	default: () => MarioKart_default,
+	meta: () => meta$4
+});
+function meta$4({}) {
+	return [{ title: "Mario Kart" }, {
+		name: "description",
+		content: "Bao Phung Homepage"
+	}];
+}
+function FormatButton({ format, onClick }) {
+	return /* @__PURE__ */ jsx("button", {
+		className: style_module_default.formatButton,
+		onClick,
+		children: format
+	});
+}
+function FormatSelectorPage() {
+	const navigate = useNavigate();
+	function FormatButtonClick(format) {
+		navigate(`/ScoreTracker`, { state: { format } });
+	}
+	return /* @__PURE__ */ jsxs(Fragment, { children: [/* @__PURE__ */ jsxs("div", {
+		id: style_module_default.marioKartFormatLabel,
+		children: [
+			/* @__PURE__ */ jsx("p", { children: "This is the Mario Kart page, mainly for setting up scores for a competitive match." }),
+			/* @__PURE__ */ jsx("p", { children: "Click on one of the formats below to set up teams." }),
+			/* @__PURE__ */ jsx("p", { children: "Note that the 8v8 and 12v12 formats will have 24 players, while the others will have 12 players by default." })
+		]
+	}), /* @__PURE__ */ jsxs("div", {
+		className: style_module_default.formatSelector,
+		children: [
+			/* @__PURE__ */ jsx(FormatButton, {
+				format: "2v2",
+				onClick: () => FormatButtonClick("2")
+			}),
+			/* @__PURE__ */ jsx(FormatButton, {
+				format: "3v3",
+				onClick: () => FormatButtonClick("3")
+			}),
+			/* @__PURE__ */ jsx(FormatButton, {
+				format: "4v4",
+				onClick: () => FormatButtonClick("4")
+			}),
+			/* @__PURE__ */ jsx(FormatButton, {
+				format: "6v6",
+				onClick: () => FormatButtonClick("6")
+			}),
+			/* @__PURE__ */ jsx(FormatButton, {
+				format: "8v8",
+				onClick: () => FormatButtonClick("8")
+			}),
+			/* @__PURE__ */ jsx(FormatButton, {
+				format: "12v12",
+				onClick: () => FormatButtonClick("12")
+			})
+		]
+	})] });
+}
+var MarioKart_default = UNSAFE_withComponentProps(function MarioKartPage() {
+	return /* @__PURE__ */ jsxs("div", {
+		className: style_module_default.marioKartContainer,
+		children: [
+			/* @__PURE__ */ jsxs("div", {
+				className: style_module_default.title,
+				children: [
+					/* @__PURE__ */ jsx("h1", {
+						id: style_module_default.aboutTitle,
+						children: "Mario Kart"
+					}),
+					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
+						to: "/",
+						style: {
+							"color": "cyan",
+							"fontSize": "20px"
+						},
+						children: "Click Here"
+					}), " to return to the home page."] }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsx("h1", {
+						style: { "fontSize": "30px" },
+						children: "Mario Kart World Track Randomizer"
+					}),
+					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
+						to: "/MarioKart/MKWorld",
+						style: {
+							"color": "cyan",
+							"fontSize": "20px"
+						},
+						children: "Click here"
+					}), " to randomize Mario Kart World tracks."] })
+				]
+			}),
+			/* @__PURE__ */ jsxs("div", {
+				id: style_module_default.marioKartCompDescription,
+				children: [
+					/* @__PURE__ */ jsx("h1", {
+						style: { "fontSize": "30px" },
+						children: "About Competitive Mario Kart"
+					}),
+					/* @__PURE__ */ jsx("p", { children: "Mario Kart can be played competitively, believe it or not.  With the advent of Mario Kart World and its groundbreaking mechanics, it comes as no surprise that players want to become the best at the game." }),
+					/* @__PURE__ */ jsx("p", { children: "In fact, competitive Mario Kart has existed for a long time, with support for older classics such as Mario Kart Wii that still runs tournaments to this day. " }),
+					/* @__PURE__ */ jsx("p", { children: "If you want to participate in competitive Mario Kart matches, please sign up on Mario Kart Central first." }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsx("p", { children: /* @__PURE__ */ jsxs("ul", { children: ["Link to the Mario Kart Central page below (click on 'Mario Kart Central'):", /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+						to: "https://mkcentral.com/en-us",
+						target: "_blank",
+						style: { "color": "cyan" },
+						children: "Mario Kart Central"
+					}) })] }) }),
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsxs("p", { children: [
+						"Then, you want to join a discord server for the Mario Kart game you wish to participate in.",
+						/* @__PURE__ */ jsx("br", {}),
+						"Note that you will need to be verified on whichever server you join, which is done via creating an account at Mario Kart Central.",
+						/* @__PURE__ */ jsx("br", {}),
+						"You can find more information about the verification process once you join your desired discord server.",
+						/* @__PURE__ */ jsx("br", {}),
+						/* @__PURE__ */ jsx("br", {}),
+						/* @__PURE__ */ jsxs("ul", { children: [
+							"List of competitive Mario Kart discords (click on one to join the discord server):",
+							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+								to: "https://discord.gg/WR6JKPn2v9",
+								target: "_blank",
+								style: { "color": "cyan" },
+								children: "Mario Kart World"
+							}) }),
+							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+								to: "https://discord.gg/revmGkE",
+								target: "_blank",
+								style: { "color": "cyan" },
+								children: "Mario Kart 8 Deluxe 150cc"
+							}) }),
+							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+								to: "https://discord.gg/dfdRkFu",
+								target: "_blank",
+								style: { "color": "cyan" },
+								children: "Mario Kart 8 Deluxe 200cc"
+							}) }),
+							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+								to: "https://discord.gg/vYr3bQQHFY",
+								target: "_blank",
+								style: { "color": "cyan" },
+								children: "Mario Kart Tour"
+							}) }),
+							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+								to: "https://discord.gg/cZZp9DdQ5e",
+								target: "_blank",
+								style: { "color": "cyan" },
+								children: "Mario Kart 7"
+							}) }),
+							/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+								to: "https://discord.gg/mkw",
+								target: "_blank",
+								style: { "color": "cyan" },
+								children: "Mario Kart Wii"
+							}) })
+						] })
+					] })
+				]
+			}),
+			/* @__PURE__ */ jsx(FormatSelectorPage, {}),
+			/* @__PURE__ */ jsx(NavigationBar, {})
+		]
+	});
+});
+// app/Pages/WorldRandomizer.tsx
+var WorldRandomizer_exports = /* @__PURE__ */ __exportAll({
+	default: () => WorldRandomizer_default,
+	meta: () => meta$3
+});
+function meta$3({}) {
+	return [{ title: "Mario Kart World Randomizer" }, {
+		name: "description",
+		content: "Mario Kart World"
+	}];
+}
+var WorldRandomizer_default = UNSAFE_withComponentProps(function WorldRandomizerPage() {
+	const tracksToId = [
+		"DKS",
+		"KTB",
+		"RR",
+		"CC",
+		"WS",
+		"rDH",
+		"MBC",
+		"PS",
+		"rCM",
+		"FO",
+		"rDDJ",
+		"GBR",
+		"rPB",
+		"SSS",
+		"CCF",
+		"rMMM",
+		"rTF",
+		"rWS",
+		"rSGB",
+		"rWSh",
+		"rDKP",
+		"DD",
+		"rMC",
+		"rSHS",
+		"SP",
+		"BCi",
+		"AH",
+		"DBB",
+		"BC",
+		"rAF"
+	];
+	const tracksList = {
+		"DKS": "DK Spaceport",
+		"KTB": "Koopa Troopa Beach",
+		"RR": "Rainbow Road",
+		"CC": "Crown City",
+		"WS": "Whistlestop Summit",
+		"rDH": "Desert Hills",
+		"MBC": "Mario Bros. Circuit",
+		"PS": "Peach Stadium",
+		"rCM": "Choco Mountain",
+		"FO": "Faraway Oasis",
+		"rDDJ": "Dino Dino Jungle",
+		"GBR": "Great ? Block Ruins",
+		"rPB": "Peach Beach",
+		"SSS": "Salty Salty Speedway",
+		"CCF": "Cheep Cheep Falls",
+		"rMMM": "Moo Moo Meadows",
+		"rTF": "Toad's Factory",
+		"rWS": "Wario Stadium",
+		"rSGB": "Shy Guy Bazaar",
+		"rWSh": "Wario Shipyard",
+		"rDKP": "DK Pass",
+		"DD": "Dandelion Depths",
+		"rMC": "Mario Circuit",
+		"rSHS": "Sky-High Sundae",
+		"SP": "Starview Peak",
+		"BCi": "Boo Cinema",
+		"AH": "Acorn Heights",
+		"DBB": "Dry Bones Burnout",
+		"BC": "Bowser's Castle",
+		"rAF": "Airship Fortress"
+	};
+	const [isRandomizing, setIsRandomizing] = useState(true);
+	const [track, setTrack] = useState("");
+	const trackRef = useRef(null);
+	const [trackPool, setTrackPool] = useState(tracksToId);
+	const [isRemovePoolChecked, setIsRemovePoolChecked] = useState(true);
+	const getRandomTrack = () => {
+		const trackId = Math.floor(Math.random() * trackPool.length);
+		setTrack(trackPool[trackId]);
+	};
+	const removeTrackFromPool = () => {
+		let trackPoolCopy = trackPool;
+		trackPoolCopy = trackPoolCopy.filter((t) => t !== track);
+		setTrackPool(trackPoolCopy);
+	};
+	function randomButtonOnClick() {
+		setIsRandomizing(!isRandomizing);
+	}
+	function removePoolCheckboxOnHandler(e) {
+		setIsRemovePoolChecked(!isRemovePoolChecked);
+	}
+	function resetTrackPool() {
+		setTrackPool(tracksToId);
+		alert("Track pool has been reset.");
+	}
+	useEffect(() => {
+		if (isRandomizing) trackRef.current = setInterval(getRandomTrack, 50);
+		else {
+			if (isRemovePoolChecked) removeTrackFromPool();
+			if (trackPool.length <= 1 && isRemovePoolChecked) resetTrackPool();
+		}
+		return () => {
+			if (trackRef.current) clearInterval(trackRef.current);
+		};
+	}, [isRandomizing]);
+	return /* @__PURE__ */ jsxs("div", {
+		className: style_module_default.randomizerContainer,
+		children: [
+			/* @__PURE__ */ jsxs("div", {
+				className: style_module_default.title,
+				children: [
+					/* @__PURE__ */ jsx("h1", {
+						id: style_module_default.aboutTitle,
+						children: "Mario Kart World Track Randomizer"
+					}),
+					/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
+						to: "/MarioKart",
+						style: {
+							"color": "cyan",
+							"fontSize": "20px"
+						},
+						children: "Click Here"
+					}), " to return to the Mario Kart page."] }),
+					/* @__PURE__ */ jsx("br", {})
+				]
+			}),
+			/* @__PURE__ */ jsxs("h1", { children: [trackPool.length, " tracks currently in the pool"] }),
+			/* @__PURE__ */ jsx("br", {}),
+			/* @__PURE__ */ jsxs("h1", { children: [
+				"Click on the icon to ",
+				isRandomizing ? "stop" : "start",
+				" the track wheel."
+			] }),
+			/* @__PURE__ */ jsx("br", {}),
+			track !== "" && /* @__PURE__ */ jsx("img", {
+				id: style_module_default.stopRandomButton,
+				src: `/${track}.jpg`,
+				width: 250,
+				height: 250,
+				alt: tracksList[track],
+				onClick: randomButtonOnClick
+			}),
+			/* @__PURE__ */ jsx("br", {}),
+			/* @__PURE__ */ jsxs("form", { children: [
+				/* @__PURE__ */ jsx("input", {
+					type: "checkbox",
+					id: "removeFromPool",
+					name: "removeFromPool",
+					onChange: (e) => removePoolCheckboxOnHandler(e),
+					checked: isRemovePoolChecked
+				}),
+				/* @__PURE__ */ jsx("label", {
+					htmlFor: "removeFromPool",
+					style: {
+						fontSize: "20px",
+						marginLeft: "5px"
+					},
+					children: "Remove from Pool"
+				}),
+				/* @__PURE__ */ jsx("br", {}),
+				/* @__PURE__ */ jsx("input", {
+					type: "button",
+					value: "Click to restore the pool",
+					onClick: () => resetTrackPool(),
+					style: {
+						fontSize: "20px",
+						marginTop: "35px"
+					}
+				})
+			] })
+		]
+	});
+});
+// app/Components/Routing.tsx
+function Routing() {
+	return /* @__PURE__ */ jsx(Fragment, {});
+}
+// app/routes/home.tsx
+var home_exports = /* @__PURE__ */ __exportAll({
+	default: () => home_default,
+	meta: () => meta$2
+});
+function meta$2({}) {
+	return [{ title: "New React Router App" }, {
+		name: "description",
+		content: "Welcome to React Router!"
+	}];
+}
+var home_default = UNSAFE_withComponentProps(function Home() {
+	return /* @__PURE__ */ jsxs(Fragment, { children: [/* @__PURE__ */ jsx(HomePage, {}), /* @__PURE__ */ jsx(Routing, {})] });
+});
+// app/Pages/ScoreTracker.tsx
+var ScoreTracker_exports = /* @__PURE__ */ __exportAll({
+	default: () => ScoreTracker_default,
+	meta: () => meta$1
+});
+function meta$1({}) {
+	return [{ title: "Score Tracker" }, {
+		name: "description",
+		content: "Bao Phung Homepage"
+	}];
+}
+var ScoreTracker_default = UNSAFE_withComponentProps(function ScoreTrackerPage() {
+	const { format } = useLocation().state || { format: null };
+	const navigate = useNavigate();
+	const [teamName, setTeamName] = useState("");
+	const [allowTeamInput, setAllowTeamInput] = useState(true);
+	const teamInputRef = useRef(null);
+	const scoreInputRef = useRef(null);
+	const [currentRace, setCurrentRace] = useState(1);
+	const [currentPlacement, setCurrentPlacement] = useState(1);
+	const maxPlayers = format === "8" || format === "12" ? 24 : 12;
+	const [teams, setTeams] = useState([]);
+	const [teamsCopy, setTeamsCopy] = useState([]);
+	const [addFormVisible, setAddFormVisible] = useState(true);
+	const [scoreFormVisible, setScoreFormVisible] = useState(false);
+	class Team {
+		#name;
+		#score;
+		#entries;
+		constructor(name) {
+			this.#name = name;
+			this.#score = 0;
+			this.#entries = parseInt(format);
+		}
+		getName() {
+			return this.#name;
+		}
+		getScore() {
+			return this.#score;
+		}
+		getEntries() {
+			return this.#entries;
+		}
+		setEntry(placement) {
+			if (this.#entries > 0) {
+				this.#addPoints(placement);
+				this.#entries--;
+				return true;
+			}
+			alert(`No more entries available for ${this.#name}.`);
+			return false;
+		}
+		resetEntries() {
+			if (this.#entries === 0) this.#entries = parseInt(format);
+		}
+		#addPoints(placement) {
+			let pointPlacements;
+			if (maxPlayers === 12) pointPlacements = [
+				15,
+				12,
+				10,
+				9,
+				8,
+				7,
+				6,
+				5,
+				4,
+				3,
+				2,
+				1
+			];
+			else if (maxPlayers === 24) pointPlacements = [
+				15,
+				12,
+				10,
+				9,
+				9,
+				8,
+				8,
+				7,
+				7,
+				6,
+				6,
+				6,
+				5,
+				5,
+				5,
+				4,
+				4,
+				4,
+				3,
+				3,
+				3,
+				2,
+				2,
+				1
+			];
+			else return;
+			this.#score += pointPlacements[placement - 1];
+		}
+	}
+	function AddTeamForm() {
+		return /* @__PURE__ */ jsxs("form", {
+			onSubmit: handleAddTeam,
+			id: style_module_default.scoreTrackerTeamSubmitForm,
+			children: [/* @__PURE__ */ jsx("label", {
+				htmlFor: "teamNameInput",
+				children: "Enter Team Name:"
+			}), /* @__PURE__ */ jsx("input", {
+				type: "text",
+				id: "teamNameInput",
+				name: "teamNameInput",
+				value: teamName,
+				onChange: (e) => setTeamName(e.target.value),
+				ref: teamInputRef,
+				style: {
+					backgroundColor: "white",
+					color: "black"
+				},
+				required: true,
+				autoFocus: true
+			})]
+		});
+	}
+	function AddScoreForm() {
+		let placementString;
+		if (currentPlacement === 1 || currentPlacement === 21) placementString = "st";
+		else if (currentPlacement === 2 || currentPlacement === 22) placementString = "nd";
+		else if (currentPlacement === 3 || currentPlacement === 23) placementString = "rd";
+		else placementString = "th";
+		return /* @__PURE__ */ jsxs("form", {
+			onSubmit: handleAddScore,
+			id: style_module_default.scoreTrackerScoreSubmitForm,
+			children: [/* @__PURE__ */ jsxs("label", {
+				htmlFor: "teamScoreInput",
+				children: [
+					"Enter team for ",
+					currentPlacement,
+					placementString,
+					" place: "
+				]
+			}), /* @__PURE__ */ jsx("input", {
+				type: "text",
+				id: "teamScoreInput",
+				name: "score",
+				value: teamName,
+				onChange: (e) => setTeamName(e.target.value),
+				ref: scoreInputRef,
+				readOnly: !allowTeamInput,
+				style: {
+					backgroundColor: "white",
+					color: "black"
+				},
+				required: true,
+				autoFocus: true
+			})]
+		});
+	}
+	function handleAddTeam(event) {
+		event.preventDefault();
+		addTeam();
+		setTeamName("");
+	}
+	function handleAddScore(event) {
+		event.preventDefault();
+		if (teamName === "" || teamName === null || teamName === void 0) {
+			alert("Please enter a team.");
+			return;
+		}
+		const teamIndex = teams.findIndex((team) => team.getName().at(0)?.toUpperCase() === teamName.at(0).toUpperCase());
+		const teamCopyIndex = teamsCopy.findIndex((team) => team.getName().at(0).toUpperCase() === teamName.at(0)?.toUpperCase());
+		if (teamIndex === -1) {
+			alert(`Team ${teamName} not found. Please enter an existing team.`);
+			setTeamName("");
+			return;
+		}
+		if (teams[teamIndex].getEntries() === 0) {
+			alert(`Team ${teamName} has no more entries.`);
+			setTeamName("");
+			return;
+		}
+		teams[teamIndex].setEntry(currentPlacement);
+		teamsCopy[teamCopyIndex].setEntry(currentPlacement);
+		setCurrentPlacement(currentPlacement + 1);
+		if (currentPlacement === maxPlayers) {
+			setCurrentPlacement(1);
+			setCurrentRace(currentRace + 1);
+			for (let i = 0; i < teams.length; i++) {
+				teams.at(i).resetEntries();
+				teamsCopy.at(i).resetEntries();
+			}
+		}
+		setTeamName("");
+		teams.sort((a, b) => b.getScore() - a.getScore());
+	}
+	function addTeam() {
+		if (teamName.trim().length > 10) {
+			alert("The desired team cannot have more than 10 characters.");
+			return;
+		}
+		if (teamName.trim().length === 0) {
+			alert("Please enter a team (white space is not counted).");
+			return;
+		}
+		for (let i = 0; i < teams.length; i++) if (teams.at(i).getName().charAt(0).toUpperCase() === teamName.charAt(0).toUpperCase()) {
+			alert(`A team with that tag (${teamName.charAt(0).toUpperCase()}) already exists.`);
+			return;
+		}
+		setTeams([...teams, new Team(teamName.trim())]);
+	}
+	useEffect(() => {
+		const setFormat = async () => {
+			if (format === void 0 || format === null || format !== "2" && format !== "3" && format !== "4" && format !== "6" && format !== "8" && format !== "12") {
+				alert("No/Invalid format selected. Please go back and select a format.");
+				navigate("/MarioKart");
+				return;
+			}
+		};
+		setFormat();
+	}, []);
+	useEffect(() => {
+		if (addFormVisible && maxPlayers / parseInt(format) === teams.length) {
+			alert("Maximum number of teams reached");
+			setAddFormVisible(false);
+			setScoreFormVisible(true);
+			let temp = [];
+			for (let i = 0; i < teams.length; i++) temp.push(new Team(teams[i].getName()));
+			setTeamsCopy(temp);
+		}
+	}, [teams]);
+	useEffect(() => {
+		if (currentRace === 13) {
+			alert("The mogi is over!");
+			setAllowTeamInput(false);
+		}
+	}, [currentRace]);
+	return format === void 0 || format === null || format !== "2" && format !== "3" && format !== "4" && format !== "6" && format !== "8" && format !== "12" ? /* @__PURE__ */ jsxs("div", {
+		className: style_module_default.scoreTrackerContainer,
+		children: [/* @__PURE__ */ jsx("div", {
+			className: style_module_default.title,
+			children: /* @__PURE__ */ jsx("h1", {
+				id: style_module_default.scoreTrackerTitle,
+				children: "Score Tracker"
+			})
+		}), /* @__PURE__ */ jsx("div", {
+			id: style_module_default.scoreTrackerContent,
+			children: /* @__PURE__ */ jsxs("p", { children: [
+				"No/Invalid format selected. Please ",
+				/* @__PURE__ */ jsx(Link, {
+					to: "/MarioKart",
+					children: "Click Here"
+				}),
+				" to go back and select a format."
+			] })
+		})]
+	}) : /* @__PURE__ */ jsxs("div", {
+		className: style_module_default.scoreTrackerContainer,
+		children: [/* @__PURE__ */ jsx("div", {
+			className: style_module_default.title,
+			children: /* @__PURE__ */ jsxs("h1", {
+				id: style_module_default.scoreTrackerTitle,
+				children: [
+					format,
+					"v",
+					format,
+					" Score Tracker"
+				]
+			})
+		}), /* @__PURE__ */ jsxs("div", {
+			id: style_module_default.scoreTrackerContent,
+			children: [
+				/* @__PURE__ */ jsxs("p", { children: [
+					"This is a page about the score tracker for the ",
+					format,
+					"v",
+					format,
+					" format."
+				] }),
+				/* @__PURE__ */ jsxs("p", { children: [/* @__PURE__ */ jsx(Link, {
+					to: "/MarioKart",
+					style: {
+						"color": "cyan",
+						"fontSize": "20px"
+					},
+					children: "Click Here"
+				}), " to return to the Mario Kart page."] }),
+				/* @__PURE__ */ jsx("div", {
+					className: style_module_default.scoreTrackerTeamsContainer,
+					children: /* @__PURE__ */ jsxs("div", {
+						className: style_module_default.teamNameDisplay,
+						children: [
+							currentRace <= 12 && maxPlayers / parseInt(format) === teams.length && /* @__PURE__ */ jsxs("p", { children: ["Race #", currentRace] }),
+							currentRace > 12 && /* @__PURE__ */ jsx("p", { children: "Mogi is over!" }),
+							/* @__PURE__ */ jsx("br", {}),
+							teams.map((team, index) => /* @__PURE__ */ jsxs("span", { children: [
+								team.getName(),
+								" (",
+								team.getScore(),
+								") ",
+								index < teams.length - 1 ? " | " : ""
+							] }, team.getName())),
+							/* @__PURE__ */ jsx("br", {}),
+							/* @__PURE__ */ jsx("br", {}),
+							teamsCopy !== void 0 && teamsCopy !== null && /* @__PURE__ */ jsxs(Fragment, { children: [maxPlayers / parseInt(format) === teams.length && /* @__PURE__ */ jsxs(Fragment, { children: [/* @__PURE__ */ jsx("p", { children: "Number of entries: " }), /* @__PURE__ */ jsx("br", {})] }), teamsCopy.map((team, index) => /* @__PURE__ */ jsxs("span", { children: [
+								team.getName(),
+								" (",
+								team.getEntries(),
+								") ",
+								index < teams.length - 1 ? " | " : ""
+							] }, index + teams.length))] })
+						]
+					})
+				}),
+				/* @__PURE__ */ jsxs("div", {
+					className: style_module_default.scoreTrackerFormContainer,
+					children: [addFormVisible && /* @__PURE__ */ jsx(AddTeamForm, {}), scoreFormVisible && /* @__PURE__ */ jsx(AddScoreForm, {})]
+				})
+			]
+		})]
+	});
+});
 // app/Pages/404Page.tsx
 var _404Page_exports = /* @__PURE__ */ __exportAll({
 	default: () => _404Page_default,
@@ -1501,11 +1504,15 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/home-BNdWhOzJ.js",
+			"module": "/assets/home-Cv8EsJg8.js",
 			"imports": [
 				"/assets/jsx-runtime-Yykwgpsd.js",
 				"/assets/style.module-BkfM9bNi.js",
 				"/assets/Navigation-D0A7mJA3.js",
+				"/assets/ProjectPage-D_V0m3S0.js",
+				"/assets/AboutPage-CR-8l3VV.js",
+				"/assets/MarioKart-DmkwtTMN.js",
+				"/assets/WorldRandomizer-DZF0O23c.js",
 				"/assets/lib-D4DplKFp.js"
 			],
 			"css": ["/assets/style-oVRx5xl2.css"],
@@ -1527,8 +1534,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/MarioKart-B3LDm1QD.js",
+			"module": "/assets/MarioKart-BRR90ipM.js",
 			"imports": [
+				"/assets/MarioKart-DmkwtTMN.js",
 				"/assets/jsx-runtime-Yykwgpsd.js",
 				"/assets/lib-D4DplKFp.js",
 				"/assets/style.module-BkfM9bNi.js",
@@ -1553,8 +1561,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/WorldRandomizer-DS6NEcdM.js",
+			"module": "/assets/WorldRandomizer-CSkcGjQS.js",
 			"imports": [
+				"/assets/WorldRandomizer-DZF0O23c.js",
 				"/assets/jsx-runtime-Yykwgpsd.js",
 				"/assets/lib-D4DplKFp.js",
 				"/assets/style.module-BkfM9bNi.js"
@@ -1603,8 +1612,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/AboutPage-DKm7ZCb0.js",
+			"module": "/assets/AboutPage-faoYaPIs.js",
 			"imports": [
+				"/assets/AboutPage-CR-8l3VV.js",
 				"/assets/jsx-runtime-Yykwgpsd.js",
 				"/assets/lib-D4DplKFp.js",
 				"/assets/style.module-BkfM9bNi.js",
@@ -1629,8 +1639,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/ProjectPage-egYz10gJ.js",
+			"module": "/assets/ProjectPage-jBvBmXsI.js",
 			"imports": [
+				"/assets/ProjectPage-D_V0m3S0.js",
 				"/assets/jsx-runtime-Yykwgpsd.js",
 				"/assets/lib-D4DplKFp.js",
 				"/assets/style.module-BkfM9bNi.js",
@@ -1669,8 +1680,8 @@ var server_manifest_default = {
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/assets/manifest-5d4f8f8b.js",
-	"version": "5d4f8f8b",
+	"url": "/assets/manifest-a79b30df.js",
+	"version": "a79b30df",
 	"sri": void 0
 };
 // \0virtual:react-router/server-build

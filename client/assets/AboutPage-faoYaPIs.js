@@ -1,0 +1,1 @@
+export{t as default,n as meta}from"./AboutPage-CR-8l3VV.js";
