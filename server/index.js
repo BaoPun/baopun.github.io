@@ -4,6 +4,7 @@ import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UN
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
+import { Link as Link$1 } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 // \0rolldown/runtime.js
 var __defProp = Object.defineProperty;
@@ -184,19 +185,19 @@ function NavigationBar() {
 		id: style_module_default["left-side-nav"],
 		onClick: clickNavigationBarHandler,
 		children: /* @__PURE__ */ jsxs("ol", { children: [
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link$1, {
 				to: "/Projects",
 				style: { fontSize: "18px" },
 				onClick: ignoreHideNavBarHandler,
 				children: "Projects"
 			}) }),
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link$1, {
 				to: "/About",
 				style: { fontSize: "18px" },
 				onClick: ignoreHideNavBarHandler,
 				children: "About Me"
 			}) }),
-			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link$1, {
 				to: "/MarioKart",
 				style: { fontSize: "18px" },
 				onClick: ignoreHideNavBarHandler,
