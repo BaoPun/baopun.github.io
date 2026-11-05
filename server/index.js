@@ -5,6 +5,7 @@ import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 import { useEffect, useRef, useState } from "react";
+import { HashRouter } from "react-router-dom";
 // \0rolldown/runtime.js
 var __defProp = Object.defineProperty;
 var __exportAll = (all, no_symbols) => {
@@ -249,7 +250,7 @@ function meta$6({}) {
 	}];
 }
 var home_default = UNSAFE_withComponentProps(function Home() {
-	return /* @__PURE__ */ jsx(HomePage, {});
+	return /* @__PURE__ */ jsx(HashRouter, { children: /* @__PURE__ */ jsx(HomePage, {}) });
 });
 // app/Pages/MarioKart.tsx
 var MarioKart_exports = /* @__PURE__ */ __exportAll({
@@ -1461,8 +1462,8 @@ var _404Page_default = UNSAFE_withComponentProps(function NotFoundPage() {
 // \0virtual:react-router/server-manifest
 var server_manifest_default = {
 	"entry": {
-		"module": "/assets/entry.client-Dgn1TTJN.js",
-		"imports": ["/assets/jsx-runtime-Yykwgpsd.js"],
+		"module": "/baopun-website/assets/entry.client-gVHfvs6f.js",
+		"imports": ["/baopun-website/assets/jsx-runtime-kJvsgA-r.js"],
 		"css": []
 	},
 	"routes": {
@@ -1479,9 +1480,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": true,
-			"module": "/assets/root-Ba_IJ3Vm.js",
-			"imports": ["/assets/jsx-runtime-Yykwgpsd.js", "/assets/lib-D4DplKFp.js"],
-			"css": ["/assets/root-B-mqanXQ.css"],
+			"module": "/baopun-website/assets/root-BXVKks00.js",
+			"imports": ["/baopun-website/assets/jsx-runtime-kJvsgA-r.js", "/baopun-website/assets/lib-Cb0_g11-.js"],
+			"css": ["/baopun-website/assets/root-B-mqanXQ.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1500,14 +1501,14 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/home-B9lX7qxW.js",
+			"module": "/baopun-website/assets/home-DPTE5lnS.js",
 			"imports": [
-				"/assets/jsx-runtime-Yykwgpsd.js",
-				"/assets/style.module-BkfM9bNi.js",
-				"/assets/Navigation-D0A7mJA3.js",
-				"/assets/lib-D4DplKFp.js"
+				"/baopun-website/assets/jsx-runtime-kJvsgA-r.js",
+				"/baopun-website/assets/style.module-BkfM9bNi.js",
+				"/baopun-website/assets/Navigation-EgfXjV0z.js",
+				"/baopun-website/assets/lib-Cb0_g11-.js"
 			],
-			"css": ["/assets/style-oVRx5xl2.css"],
+			"css": ["/baopun-website/assets/style-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1526,14 +1527,14 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/MarioKart-B3LDm1QD.js",
+			"module": "/baopun-website/assets/MarioKart-DpGDlkAU.js",
 			"imports": [
-				"/assets/jsx-runtime-Yykwgpsd.js",
-				"/assets/lib-D4DplKFp.js",
-				"/assets/style.module-BkfM9bNi.js",
-				"/assets/Navigation-D0A7mJA3.js"
+				"/baopun-website/assets/jsx-runtime-kJvsgA-r.js",
+				"/baopun-website/assets/lib-Cb0_g11-.js",
+				"/baopun-website/assets/style.module-BkfM9bNi.js",
+				"/baopun-website/assets/Navigation-EgfXjV0z.js"
 			],
-			"css": ["/assets/style-oVRx5xl2.css"],
+			"css": ["/baopun-website/assets/style-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1552,13 +1553,13 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/WorldRandomizer-DS6NEcdM.js",
+			"module": "/baopun-website/assets/WorldRandomizer-DmbZ-x6W.js",
 			"imports": [
-				"/assets/jsx-runtime-Yykwgpsd.js",
-				"/assets/lib-D4DplKFp.js",
-				"/assets/style.module-BkfM9bNi.js"
+				"/baopun-website/assets/jsx-runtime-kJvsgA-r.js",
+				"/baopun-website/assets/lib-Cb0_g11-.js",
+				"/baopun-website/assets/style.module-BkfM9bNi.js"
 			],
-			"css": ["/assets/style-oVRx5xl2.css"],
+			"css": ["/baopun-website/assets/style-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1577,13 +1578,13 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/ScoreTracker-BVCRgSyn.js",
+			"module": "/baopun-website/assets/ScoreTracker-D590Ysbi.js",
 			"imports": [
-				"/assets/jsx-runtime-Yykwgpsd.js",
-				"/assets/lib-D4DplKFp.js",
-				"/assets/style.module-BkfM9bNi.js"
+				"/baopun-website/assets/jsx-runtime-kJvsgA-r.js",
+				"/baopun-website/assets/lib-Cb0_g11-.js",
+				"/baopun-website/assets/style.module-BkfM9bNi.js"
 			],
-			"css": ["/assets/style-oVRx5xl2.css"],
+			"css": ["/baopun-website/assets/style-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1602,14 +1603,14 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/AboutPage-DKm7ZCb0.js",
+			"module": "/baopun-website/assets/AboutPage-DAhh4k9e.js",
 			"imports": [
-				"/assets/jsx-runtime-Yykwgpsd.js",
-				"/assets/lib-D4DplKFp.js",
-				"/assets/style.module-BkfM9bNi.js",
-				"/assets/Navigation-D0A7mJA3.js"
+				"/baopun-website/assets/jsx-runtime-kJvsgA-r.js",
+				"/baopun-website/assets/lib-Cb0_g11-.js",
+				"/baopun-website/assets/style.module-BkfM9bNi.js",
+				"/baopun-website/assets/Navigation-EgfXjV0z.js"
 			],
-			"css": ["/assets/style-oVRx5xl2.css"],
+			"css": ["/baopun-website/assets/style-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1628,14 +1629,14 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/ProjectPage-egYz10gJ.js",
+			"module": "/baopun-website/assets/ProjectPage-ZMG2LVF8.js",
 			"imports": [
-				"/assets/jsx-runtime-Yykwgpsd.js",
-				"/assets/lib-D4DplKFp.js",
-				"/assets/style.module-BkfM9bNi.js",
-				"/assets/Navigation-D0A7mJA3.js"
+				"/baopun-website/assets/jsx-runtime-kJvsgA-r.js",
+				"/baopun-website/assets/lib-Cb0_g11-.js",
+				"/baopun-website/assets/style.module-BkfM9bNi.js",
+				"/baopun-website/assets/Navigation-EgfXjV0z.js"
 			],
-			"css": ["/assets/style-oVRx5xl2.css"],
+			"css": ["/baopun-website/assets/style-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -1654,22 +1655,22 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/404Page-C9FCRIB9.js",
+			"module": "/baopun-website/assets/404Page-BbOHXT5d.js",
 			"imports": [
-				"/assets/jsx-runtime-Yykwgpsd.js",
-				"/assets/lib-D4DplKFp.js",
-				"/assets/style.module-BkfM9bNi.js",
-				"/assets/Navigation-D0A7mJA3.js"
+				"/baopun-website/assets/jsx-runtime-kJvsgA-r.js",
+				"/baopun-website/assets/lib-Cb0_g11-.js",
+				"/baopun-website/assets/style.module-BkfM9bNi.js",
+				"/baopun-website/assets/Navigation-EgfXjV0z.js"
 			],
-			"css": ["/assets/style-oVRx5xl2.css"],
+			"css": ["/baopun-website/assets/style-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/assets/manifest-f622bff8.js",
-	"version": "f622bff8",
+	"url": "/baopun-website/assets/manifest-7230cc6d.js",
+	"version": "7230cc6d",
 	"sri": void 0
 };
 // \0virtual:react-router/server-build
@@ -1689,7 +1690,7 @@ var routeDiscovery = {
 	"mode": "lazy",
 	"manifestPath": "/__manifest"
 };
-var publicPath = "/";
+var publicPath = "/baopun-website/";
 var entry = { module: entry_server_node_exports };
 var routes = {
 	"root": {
