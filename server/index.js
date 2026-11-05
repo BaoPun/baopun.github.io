@@ -1,9 +1,10 @@
 import { PassThrough } from "node:stream";
 import { createReadableStreamFromReadable } from "@react-router/node";
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
+import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration, ServerRouter, UNSAFE_withComponentProps, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse } from "react-router";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
-import { jsx, jsxs } from "react/jsx-runtime";
+import { Fragment, jsx, jsxs } from "react/jsx-runtime";
+import { useState } from "react";
 // \0rolldown/runtime.js
 var __defProp = Object.defineProperty;
 var __exportAll = (all, no_symbols) => {
@@ -120,100 +121,141 @@ var ErrorBoundary = UNSAFE_withErrorBoundaryProps(function ErrorBoundary({ error
 		]
 	});
 });
-// app/welcome/logo-dark.svg
-var logo_dark_default = "/baopun-website/assets/logo-dark-pX2395Y0.svg";
-// app/welcome/logo-light.svg
-var logo_light_default = "/baopun-website/assets/logo-light-CVbx2LBR.svg";
-// app/welcome/welcome.tsx
-function Welcome() {
-	return /* @__PURE__ */ jsx("main", {
-		className: "flex items-center justify-center pt-16 pb-4",
-		children: /* @__PURE__ */ jsxs("div", {
-			className: "flex-1 flex flex-col items-center gap-16 min-h-0",
-			children: [/* @__PURE__ */ jsx("header", {
-				className: "flex flex-col items-center gap-9",
-				children: /* @__PURE__ */ jsxs("div", {
-					className: "w-[500px] max-w-[100vw] p-4",
-					children: [/* @__PURE__ */ jsx("img", {
-						src: logo_light_default,
-						alt: "React Router",
-						className: "block w-full dark:hidden"
-					}), /* @__PURE__ */ jsx("img", {
-						src: logo_dark_default,
-						alt: "React Router",
-						className: "hidden w-full dark:block"
-					})]
-				})
-			}), /* @__PURE__ */ jsx("div", {
-				className: "max-w-[300px] w-full space-y-6 px-4",
-				children: /* @__PURE__ */ jsxs("nav", {
-					className: "rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4",
-					children: [/* @__PURE__ */ jsx("p", {
-						className: "leading-6 text-gray-700 dark:text-gray-200 text-center",
-						children: "What's next?"
-					}), /* @__PURE__ */ jsx("ul", { children: resources.map(({ href, text, icon }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsxs("a", {
-						className: "group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500",
-						href,
-						target: "_blank",
-						rel: "noreferrer",
-						children: [icon, text]
-					}) }, href)) })]
-				})
-			})]
-		})
-	});
+var style_module_default = {
+	page: "_page_c3ljc_1",
+	main: "_main_c3ljc_59",
+	ctas: "_ctas_c3ljc_121",
+	primary: "_primary_c3ljc_171",
+	secondary: "_secondary_c3ljc_183",
+	footer: "_footer_c3ljc_193",
+	logo: "_logo_c3ljc_333",
+	title: "_title_c3ljc_345",
+	"left-side-nav": "_left-side-nav_c3ljc_1",
+	"about-content": "_about-content_c3ljc_405",
+	"projects-list": "_projects-list_c3ljc_421",
+	projectContainer: "_projectContainer_c3ljc_457",
+	projectList: "_projectList_c3ljc_475",
+	projects: "_projects_c3ljc_421",
+	projectFilterContainer: "_projectFilterContainer_c3ljc_503",
+	filterTextButton: "_filterTextButton_c3ljc_1",
+	projectLanguageFilter: "_projectLanguageFilter_c3ljc_537",
+	projectFrameworkFilter: "_projectFrameworkFilter_c3ljc_537",
+	projectToolFilter: "_projectToolFilter_c3ljc_537",
+	projectDatabaseFilter: "_projectDatabaseFilter_c3ljc_537",
+	projectFilter: "_projectFilter_c3ljc_503",
+	projectChooseToFilter: "_projectChooseToFilter_c3ljc_551",
+	aboutContainer: "_aboutContainer_c3ljc_577",
+	aboutDescription: "_aboutDescription_c3ljc_585",
+	aboutCareer: "_aboutCareer_c3ljc_603",
+	marioKartContainer: "_marioKartContainer_c3ljc_623",
+	marioKartCompDescription: "_marioKartCompDescription_c3ljc_1",
+	marioKartTitle: "_marioKartTitle_c3ljc_1",
+	aboutTitle: "_aboutTitle_c3ljc_1",
+	marioKartFormatLabel: "_marioKartFormatLabel_c3ljc_1",
+	formatSelector: "_formatSelector_c3ljc_673",
+	formatButton: "_formatButton_c3ljc_691",
+	scoreTrackerContainer: "_scoreTrackerContainer_c3ljc_705",
+	scoreTrackerFormContainer: "_scoreTrackerFormContainer_c3ljc_717",
+	scoreTrackerTeamSubmitForm: "_scoreTrackerTeamSubmitForm_c3ljc_1",
+	scoreTrackerScoreSubmitForm: "_scoreTrackerScoreSubmitForm_c3ljc_1",
+	scoreTrackerTeamsContainer: "_scoreTrackerTeamsContainer_c3ljc_747",
+	teamNameDisplay: "_teamNameDisplay_c3ljc_755",
+	randomizerContainer: "_randomizerContainer_c3ljc_769",
+	stopRandomButton: "_stopRandomButton_c3ljc_1"
+};
+// app/Components/Navigation.tsx
+function NavigationBar() {
+	const [showNavigation, setShowNavigation] = useState(true);
+	function clickNavigationBarHandler() {
+		setShowNavigation(!showNavigation);
+	}
+	function ignoreHideNavBarHandler(event) {
+		event.stopPropagation();
+	}
+	return /* @__PURE__ */ jsxs(Fragment, { children: [!showNavigation && /* @__PURE__ */ jsx("span", {
+		style: {
+			position: "absolute",
+			top: "0%",
+			fontSize: "45px"
+		},
+		onClick: clickNavigationBarHandler,
+		children: "☰"
+	}), showNavigation && /* @__PURE__ */ jsx("div", {
+		id: style_module_default["left-side-nav"],
+		onClick: clickNavigationBarHandler,
+		children: /* @__PURE__ */ jsxs("ol", { children: [
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+				to: "/Projects",
+				style: { fontSize: "18px" },
+				onClick: ignoreHideNavBarHandler,
+				children: "Projects"
+			}) }),
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+				to: "/About",
+				style: { fontSize: "18px" },
+				onClick: ignoreHideNavBarHandler,
+				children: "About Me"
+			}) }),
+			/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, {
+				to: "/MarioKart",
+				style: { fontSize: "18px" },
+				onClick: ignoreHideNavBarHandler,
+				children: "Mario Kart"
+			}) })
+		] })
+	})] });
 }
-var resources = [{
-	href: "https://reactrouter.com/docs",
-	text: "React Router Docs",
-	icon: /* @__PURE__ */ jsx("svg", {
-		xmlns: "http://www.w3.org/2000/svg",
-		width: "24",
-		height: "20",
-		viewBox: "0 0 20 20",
-		fill: "none",
-		className: "stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300",
-		children: /* @__PURE__ */ jsx("path", {
-			d: "M9.99981 10.0751V9.99992M17.4688 17.4688C15.889 19.0485 11.2645 16.9853 7.13958 12.8604C3.01467 8.73546 0.951405 4.11091 2.53116 2.53116C4.11091 0.951405 8.73546 3.01467 12.8604 7.13958C16.9853 11.2645 19.0485 15.889 17.4688 17.4688ZM2.53132 17.4688C0.951566 15.8891 3.01483 11.2645 7.13974 7.13963C11.2647 3.01471 15.8892 0.951453 17.469 2.53121C19.0487 4.11096 16.9854 8.73551 12.8605 12.8604C8.73562 16.9853 4.11107 19.0486 2.53132 17.4688Z",
-			strokeWidth: "1.5",
-			strokeLinecap: "round"
-		})
-	})
-}, {
-	href: "https://rmx.as/discord",
-	text: "Join Discord",
-	icon: /* @__PURE__ */ jsx("svg", {
-		xmlns: "http://www.w3.org/2000/svg",
-		width: "24",
-		height: "20",
-		viewBox: "0 0 24 20",
-		fill: "none",
-		className: "stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300",
-		children: /* @__PURE__ */ jsx("path", {
-			d: "M15.0686 1.25995L14.5477 1.17423L14.2913 1.63578C14.1754 1.84439 14.0545 2.08275 13.9422 2.31963C12.6461 2.16488 11.3406 2.16505 10.0445 2.32014C9.92822 2.08178 9.80478 1.84975 9.67412 1.62413L9.41449 1.17584L8.90333 1.25995C7.33547 1.51794 5.80717 1.99419 4.37748 2.66939L4.19 2.75793L4.07461 2.93019C1.23864 7.16437 0.46302 11.3053 0.838165 15.3924L0.868838 15.7266L1.13844 15.9264C2.81818 17.1714 4.68053 18.1233 6.68582 18.719L7.18892 18.8684L7.50166 18.4469C7.96179 17.8268 8.36504 17.1824 8.709 16.4944L8.71099 16.4904C10.8645 17.0471 13.128 17.0485 15.2821 16.4947C15.6261 17.1826 16.0293 17.8269 16.4892 18.4469L16.805 18.8725L17.3116 18.717C19.3056 18.105 21.1876 17.1751 22.8559 15.9238L23.1224 15.724L23.1528 15.3923C23.5873 10.6524 22.3579 6.53306 19.8947 2.90714L19.7759 2.73227L19.5833 2.64518C18.1437 1.99439 16.6386 1.51826 15.0686 1.25995ZM16.6074 10.7755L16.6074 10.7756C16.5934 11.6409 16.0212 12.1444 15.4783 12.1444C14.9297 12.1444 14.3493 11.6173 14.3493 10.7877C14.3493 9.94885 14.9378 9.41192 15.4783 9.41192C16.0471 9.41192 16.6209 9.93851 16.6074 10.7755ZM8.49373 12.1444C7.94513 12.1444 7.36471 11.6173 7.36471 10.7877C7.36471 9.94885 7.95323 9.41192 8.49373 9.41192C9.06038 9.41192 9.63892 9.93712 9.6417 10.7815C9.62517 11.6239 9.05462 12.1444 8.49373 12.1444Z",
-			strokeWidth: "1.5"
-		})
-	})
-}];
+// app/Pages/HomePage.tsx
+function HomePage() {
+	return /* @__PURE__ */ jsxs(Fragment, { children: [
+		/* @__PURE__ */ jsx("div", {
+			className: style_module_default.title,
+			children: /* @__PURE__ */ jsx("h1", {
+				id: "HomeTitle",
+				children: "Information about Bao Phung"
+			})
+		}),
+		/* @__PURE__ */ jsx("div", {
+			className: style_module_default.page,
+			children: /* @__PURE__ */ jsxs("main", {
+				className: style_module_default.main,
+				children: [/* @__PURE__ */ jsxs("p", { children: [
+					"Hi everyone, this is the home page.  For those viewing this website, this is just a page about me going over some of the work I've done and all that good stuff.",
+					/* @__PURE__ */ jsx("br", {}),
+					"You can find specific sections on the navigation bar at the left side.",
+					/* @__PURE__ */ jsx("br", {}),
+					/* @__PURE__ */ jsx("br", {})
+				] }), /* @__PURE__ */ jsxs("p", { children: [
+					"I am planning on adding more content to this home page, as well as the other pages.  However, this is currently a work in progress (WIP).",
+					/* @__PURE__ */ jsx("br", {}),
+					"However, if you are interested in competitive Mario Kart, I have a dedicated Mario Kart page that helps keep track of team scores for various team formats. ",
+					/* @__PURE__ */ jsx("br", {}),
+					"I also plan on adding a performance tracker for Mario Kart World, although this is currently a work in progress."
+				] })]
+			})
+		}),
+		/* @__PURE__ */ jsx(NavigationBar, {})
+	] });
+}
 // app/routes/home.tsx
 var home_exports = /* @__PURE__ */ __exportAll({
 	default: () => home_default,
 	meta: () => meta
 });
 function meta({}) {
-	return [{ title: "New React Router App" }, {
+	return [{ title: "Bao Phung's Website" }, {
 		name: "description",
-		content: "Welcome to React Router!"
+		content: "Bao Phung Homepage"
 	}];
 }
 var home_default = UNSAFE_withComponentProps(function Home() {
-	return /* @__PURE__ */ jsx(Welcome, {});
+	return /* @__PURE__ */ jsx(HomePage, {});
 });
 // \0virtual:react-router/server-manifest
 var server_manifest_default = {
 	"entry": {
-		"module": "/baopun-website/assets/entry.client-ChhaeA7v.js",
-		"imports": ["/baopun-website/assets/jsx-runtime-7vNEmt-1.js"],
+		"module": "/baopun-website/assets/entry.client-Dgn1TTJN.js",
+		"imports": ["/baopun-website/assets/jsx-runtime-Yykwgpsd.js"],
 		"css": []
 	},
 	"routes": {
@@ -230,9 +272,9 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": true,
-			"module": "/baopun-website/assets/root-BJmm2LDY.js",
-			"imports": ["/baopun-website/assets/jsx-runtime-7vNEmt-1.js"],
-			"css": ["/baopun-website/assets/root-CtQuFGQ3.css"],
+			"module": "/baopun-website/assets/root-Ba_IJ3Vm.js",
+			"imports": ["/baopun-website/assets/jsx-runtime-Yykwgpsd.js", "/baopun-website/assets/lib-D4DplKFp.js"],
+			"css": ["/baopun-website/assets/root-B-mqanXQ.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -251,17 +293,17 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/baopun-website/assets/home-CutTzpsd.js",
-			"imports": ["/baopun-website/assets/jsx-runtime-7vNEmt-1.js"],
-			"css": [],
+			"module": "/baopun-website/assets/home-ajXRO7rm.js",
+			"imports": ["/baopun-website/assets/jsx-runtime-Yykwgpsd.js", "/baopun-website/assets/lib-D4DplKFp.js"],
+			"css": ["/baopun-website/assets/home-oVRx5xl2.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/baopun-website/assets/manifest-2520c86e.js",
-	"version": "2520c86e",
+	"url": "/baopun-website/assets/manifest-fb58b30b.js",
+	"version": "fb58b30b",
 	"sri": void 0
 };
 // \0virtual:react-router/server-build
